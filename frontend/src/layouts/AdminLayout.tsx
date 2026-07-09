@@ -1,0 +1,2 @@
+import {useState} from "react";import {Outlet} from "react-router-dom";import {Sidebar} from "../components/Sidebar";import {Header} from "../components/Header";
+export default function AdminLayout(){const [open,setOpen]=useState(false);return <div className={`shell ${open?"navOpen":""}`}><div className="navWrap" onClick={()=>setOpen(false)}><Sidebar/></div><main><Header onMenu={()=>setOpen(v=>!v)}/><Outlet/></main></div>}

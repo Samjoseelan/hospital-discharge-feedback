@@ -1,0 +1,2 @@
+import type {LucideIcon} from "lucide-react";
+export function MetricCard({label,value,change,icon:Icon,tone="teal"}:{label:string;value:string;change:string;icon:LucideIcon;tone?:string}){return <article className="metric"><div className={`metricIcon ${tone}`}><Icon size={21}/></div><div className="metricCopy"><span>{label}</span><strong>{value}</strong><small className={change.startsWith("+")?"up":"neutral"}>{change}</small></div></article>}
